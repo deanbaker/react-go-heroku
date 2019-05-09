@@ -3,3 +3,8 @@ build:
     web: Dockerfile
     worker:
        dockerfile: Dockerfile
+       target: builder    
+release:
+  image: worker
+  command:
+    - ./migrate.sh
